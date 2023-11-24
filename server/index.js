@@ -23,20 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Nodemailer setup
 const transporter = nodemailer.createTransport({
-  // host: process.env.MAIL_HOST,
-  // port: process.env.MAIL_PORT,
-  // secure: true, // Use SSL encryption
-  // auth: {
-  //   user: process.env.MAIL_USER,
-  //   pass: process.env.MAIL_PASS,
-  // //   user:"testd1312@gmail.com",
-  // //   pass:"testtesttest1!"
-  // },
-  // service: "gmail",
-  // tls: {
-  //   rejectUnauthorized: false
-  // },
-  // secure: true,
+
   service: 'gmail',
   auth: {
       user: "testd1312@gmail.com",
