@@ -5,11 +5,16 @@ const dotenv = require("dotenv");
 const cors = require('cors');
 
 dotenv.config();
+// console.log(process.env.MAIL_USER);
+// console.log(process.env.MAIL_TO);
+// console.log(process.env.MAIL_PASS);
+// console.log(process.env.MAIL_HOST);
+// console.log(process.env.MAIL_PORT);
 
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
@@ -27,7 +32,9 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
       user: "testd1312@gmail.com",
-      pass: "sohx izka scps wgxf",
+      pass: "xwsz cxne zbua emfj",
+      // user: process.env.MAIL_USER,
+      // pass: process.env.MAIL_PASS,
   },
 });
 
@@ -66,10 +73,15 @@ app.post('/api/messages', async (req, res) => {
       from: `Portfolio Contact Form <${process.env.MAIL_USER}>`,
       to: "testd1312@gmail.com", // Your email address
       // to: process.env.MAIL_TO, // Your email address
-      subject: `New Message: ${subject}`,
-      text: `Message from ${name} (${email}) (${phone}) : ${message}`
+      subject: `${subject}`,
+      text: `Message from: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     });
-    console.log('Recipient email:', process.env.MAIL_TO);
+    console.log("Recipient email:", process.env.MAIL_TO);
+    console.log("Recipient user:",process.env.MAIL_USER);
+    console.log("Recipient to:",process.env.MAIL_TO);
+    console.log("Recipient pass:",process.env.MAIL_PASS);
+    console.log("Recipient host:",process.env.MAIL_HOST);
+    console.log("Recipient port:",process.env.MAIL_PORT);
 
     res.status(200).send({ success: 'Message sent successfully' });
   } catch (error) {
