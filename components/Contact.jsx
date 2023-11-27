@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
 import contactImg from "../public/assets/contacts.jpg";
 import { AiOutlineMail } from "react-icons/ai";
@@ -9,21 +9,22 @@ import Link from "next/link";
 import axios from "axios";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+
+  const initialState = {
     name: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
-  });
+  };
+  const [formData, setFormData] = useState(initialState);
   const [submitted, setSubmitted] = useState(false);
-
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-
     });
   };
 
@@ -31,37 +32,43 @@ const Contact = () => {
     e.preventDefault();
     try {
       const { name, email, phone, subject, message } = formData;
-  
+
       const payload = {
-        name: name,
-        email: email,
-        phone: phone,
-        subject: subject,
-        message: message,
+        name,
+        email,
+        phone,
+        subject,
+        message,
       };
-  
+
       const response = await axios.post(
         "http://localhost:3001/api/messages",
         payload
       );
-  
+
       if (response.status === 200) {
         setSubmitted(true);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
       } else {
         console.error("Error sending email:", response.data.error);
+        setError(response.data.error);
       }
     } catch (error) {
       console.error("Error sending email:", error);
+      setError("Error sending email", error);
     }
   };
+
+  // useEffect to reset form data after submitted state changes
+  useEffect(() => {
+    if (submitted) {
+      const timeoutId = setTimeout(() => {
+        setSubmitted(false); 
+        setFormData(initialState);
+      }, 3000);
   
+      return () => clearTimeout(timeoutId);
+    }
+  }, [submitted]);
 
   return (
     <div id="contact" className="w-full lg:h-screen ">
@@ -120,6 +127,7 @@ const Contact = () => {
                     <label className="uppercase test-sm py-2">Name</label>
                     <input
                       type="text"
+                      value={formData.name}
                       name="name"
                       onChange={handleChange}
                       className="border-2 border-gray-300 p-3 shadow-xl flex rounded-lg"
@@ -131,6 +139,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
+                      value={formData.phone}
                       name="phone"
                       onChange={handleChange}
                       className="border-2 border-gray-300 p-3 shadow-xl flex rounded-lg"
@@ -141,6 +150,7 @@ const Contact = () => {
                   <label className="uppercase test-sm py-2">Email</label>
                   <input
                     type="email"
+                    value={formData.email}
                     name="email"
                     onChange={handleChange}
                     className="border-2 border-gray-300 p-3 shadow-xl flex rounded-lg w-full"
@@ -150,6 +160,7 @@ const Contact = () => {
                   <label className="uppercase test-sm py-2">Subject</label>
                   <input
                     type="text"
+                    value={formData.subject}
                     name="subject"
                     onChange={handleChange}
                     className="border-2 border-gray-300 p-3 shadow-xl flex rounded-lg w-full"
@@ -159,6 +170,7 @@ const Contact = () => {
                   <label className="uppercase test-sm py-2">Message</label>
                   <textarea
                     type="text"
+                    value={formData.message}
                     name="message"
                     onChange={handleChange}
                     className="border-2 border-gray-300 p-3 shadow-xl flex rounded-lg w-full rows=100"
@@ -168,6 +180,7 @@ const Contact = () => {
                   Send Message
                 </button>
                 {submitted && <p>Thank you for your submission!</p>}
+                {error && <p className="text-red-500">{error}</p>}
               </form>
             </div>
           </div>
