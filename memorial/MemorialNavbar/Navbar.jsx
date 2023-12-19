@@ -21,19 +21,19 @@ const MemorialNavbar = () => {
 	}
 	//TODO: Make this lists dynamic with router?
   return (
-		<ul id="memorial-navbar" className="flex justify-center items-center w-full h-12 px-2 2xl:px-16 bg-indigo-300">
+		<ul id="memorial-navbar" className="flex justify-center items-center w-full p-6 2xl:p-6 text-xl bg-indigo-300 text-[#545F66]font-bold">
 		
-					<li className='ml-10 text-sm uppercase hover:border-b'>
+					<li className='ml-10 text-xl uppercase hover:border-b'>
 						<Link href='/'>Home</Link>
 					</li>
 					<li>
-						<Link className='ml-10 text-sm uppercase hover:border-b' href='/photos'>Photos</Link>
+						<Link className='ml-10 text-xl uppercase hover:border-b' href='/photos'>Photos</Link>
 					</li>
 					<li>
-						<Link className='ml-10 text-sm uppercase hover:border-b' href='/memories'>Memories</Link>
+						<Link className='ml-10 text-xl uppercase hover:border-b' href='/memories'>Memories</Link>
 					</li>
 					<li>
-						<Link className='ml-10 text-sm uppercase hover:border-b' href='/portfolio'>Portfolio</Link>
+						<Link className='ml-10 text-xl uppercase hover:border-b' href='/portfolio'>Portfolio</Link>
 					</li>
 		</ul>
 	);
