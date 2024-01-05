@@ -9,7 +9,7 @@ const MemorialBackground = () => {
          className='object-cover'
          width='1000' 
          height='700'
-            /> 	
+      /> 	
       </div>
     )
 }

@@ -1,0 +1,18 @@
+.footer {
+	padding: 40px;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	gap: 40px;
+	background-color: #E4EAEE;
+	margin-top: 60px;
+}
+
+.footerLink {
+	color: rgb(27, 117, 208);
+	transition: all .3s;
+}
+
+.footerLink:hover {
+	color:rgb(21, 92, 162)
+}

@@ -1,36 +1,21 @@
 import Card from '../../memorial/Comments/Card'
 import Navbar from '../../memorial/MemorialNavbar';
-
-const memories = [
-    {
-     name: 'john',
-     date: '2 hours',
-     comment: 'test'
-    },
-    {
-        name: 'john',
-        date: '2 hours',
-        comment: 'test'
-       },
-       {
-        name: 'john',
-        date: '3 hours',
-        comment: 'test'
-       },
-]
+import styles from './memories.module.css';
+import { memories } from './memoriesData';
 
 const Memories = () => {
-    return (
-        <div className='bg-indigo-300 pb-16 h-screen'>
-            <Navbar/>
-        
+  return (
+    <div>
+      <Navbar />
+      <div className={styles.heroDiv}></div>
+      <section className={styles.commentsSection}>
+
         {memories.map(memory => (
-            <Card memory={memory}/>
+          <Card memory={memory} />
         ))}
-       
-               </div>
-     
-    )
+      </section>
+    </div>
+  )
 }
 
 export default Memories;

@@ -1,6 +1,5 @@
 import Memorial from '../memorial';
 
-
 const MemorialHome = () => {
 	return (
 		<div>
