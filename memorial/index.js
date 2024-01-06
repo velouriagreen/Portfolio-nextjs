@@ -4,10 +4,10 @@ import MemorialFooter from "./MemorialFooter/Footer"
 
 export default function Memorial() {
 	return (
-        <div>
-            <MemorialNavbar />
-            <MemorialHome />
-            <MemorialFooter />
-        </div>
+    <div>
+      <MemorialNavbar />
+      <MemorialHome />
+      <MemorialFooter />
+    </div>
   )
-}
+};

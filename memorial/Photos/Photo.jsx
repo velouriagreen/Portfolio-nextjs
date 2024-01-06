@@ -18,8 +18,6 @@ const Photo = () => {
 	const handleMovePrev = () => setIndex(prevIndex);
 	const handleMoveNext = () => setIndex(nextIndex);
 	
-
-	console.log('current image', currentImage, nextImage);
 return (
 	<div className="max-w-7xl mx-auto mt-4">
       <Gallery

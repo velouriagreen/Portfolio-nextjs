@@ -31,6 +31,13 @@ export const images = [
 	},
 
 	{
+		src:'/assets/photos/dahlak-and-sirac.jpg',
+		original: '/dahlak/photos/dahlak-and-sirac.jpg',
+		width: 1316,
+		height: 1519
+	},
+
+	{
 		src:'/assets/photos/dahlak-fire.jpg',
 		original: '/dahlak/photos/dahlak-fire.jpg',
 		width: 1081,
@@ -42,6 +49,13 @@ export const images = [
 		original: '/dahlak/photos/dahlak-youngII.jpg',
 		width: 2293,
 		height: 1720
+	},
+
+	{
+		src:'/assets/photos/dahlak-nipple-pinch.jpg',
+		original: '/dahlak/photos/dahlak-nipple-pinch.jpg',
+		width: 828,
+		height: 1216
 	},
 	 
 	{
@@ -63,13 +77,7 @@ export const images = [
 		width: 828,
 		height: 1134,
 	},
-	{
-		src:'/dahlak-yellow.jpeg',
-		original:'/dahlak-yellow.jpeg',
-		width: 828,
-		height: 827
-	},
-
+	
 	{
 		src:'/assets/photos/SOSO.jpg',
 		original: '/dahlak/photos/SOSO.jpg',
@@ -97,6 +105,7 @@ export const images = [
 		width: 2048,
 		height: 1152
 	},
+	
 
 	{
 		src:'/assets/photos/dahlak-young.jpg',
@@ -138,6 +147,55 @@ export const images = [
 		original: '/dahlak/photos/janick-kicking-dahlak.jpg',
 		width: 1179,
 		height: 771
+	},
+
+	{
+		src:'/assets/photos/dahlak-and-sam.jpg',
+		original: '/dahlak/photos/dahlak-and-sam.jpg',
+		width: 1214,
+		height: 1618
+	},
+
+	{
+		src:'/assets/photos/dahlak-pink-chair.jpg',
+		original: '/dahlak/photos/dahlak-pink-chair.jpg',
+		width: 1440,
+		height: 1440
+	},
+
+	{
+		src:'/assets/photos/dahlak-soso-truck.jpg',
+		original: '/dahlak/photos/dahlak-soso-truck.jpg',
+		width: 1536,
+		height: 1132
+	},
+
+	{
+		src:'/assets/photos/dahlak-and-kristin-smiling.jpg',
+		original: '/dahlak/photos/dahlak-and-kristin-smiling.jpg',
+		width: 1214,
+		height: 1618
+	},
+
+	{
+		src:'/assets/photos/dahlak-bathtub.jpg',
+		original: '/dahlak/photos/dahlak-bathtub.jpg',
+		width: 1214,
+		height: 1618
+	},
+
+	{
+		src:'/assets/photos/dahlak-kissing-kristen.jpg',
+		original: '/dahlak/photos/dahlak-kissing-kristen.jpg',
+		width: 828,
+		height: 1028
+	},
+
+	{
+		src:'/dahlak-yellow.jpeg',
+		original:'/dahlak-yellow.jpeg',
+		width: 828,
+		height: 827
 	},
 ];
 

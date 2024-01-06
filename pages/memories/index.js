@@ -2,6 +2,7 @@ import Card from '../../memorial/Comments/Card'
 import Navbar from '../../memorial/MemorialNavbar';
 import styles from './memories.module.css';
 import { memories } from './memoriesData';
+import MemorialFooter from '../../memorial/MemorialFooter';
 
 const Memories = () => {
   return (
@@ -11,9 +12,10 @@ const Memories = () => {
       <section className={styles.commentsSection}>
 
         {memories.map(memory => (
-          <Card memory={memory} />
+          <Card memory={memory} key={memory.name} />
         ))}
       </section>
+      <MemorialFooter />
     </div>
   )
 }
