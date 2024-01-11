@@ -1,7 +1,7 @@
 import Card from '../../memorial/Comments/Card'
 import Navbar from '../../memorial/MemorialNavbar';
 import styles from './memories.module.css';
-import { memories } from './memoriesData';
+import { memories } from '../../memorial/Data/memoriesData';
 import MemorialFooter from '../../memorial/MemorialFooter';
 
 const Memories = () => {
