@@ -45,6 +45,27 @@ export const images = [
 	},
 
 	{
+		src:'/assets/photos/Dahlak-ancestors-wedding.jpg',
+		original:'/Dahlak-ancestors-wedding.jpg',
+		width: 1587,
+		height: 1152
+	},
+
+	{
+		src:'/assets/photos/Dahlak-childhood-friends.jpg',
+		original:'/Dahlak-childhood-friends.jpg',
+		width: 1130,
+		height: 1359
+	},
+
+	{
+		src:'/assets/photos/Dahlak-childhood-party.jpg',
+		original:'/Dahlak-childhood-party.jpg',
+		width: 1389,
+		height: 926
+	},
+
+	{
 		src:'/assets/photos/dahlak-youngII.jpg',
 		original: '/dahlak/photos/dahlak-youngII.jpg',
 		width: 2293,
@@ -189,6 +210,20 @@ export const images = [
 		original: '/dahlak/photos/dahlak-kissing-kristen.jpg',
 		width: 828,
 		height: 1028
+	},
+
+	{
+		src:'/assets/photos/Dahlak-art-king.jpg',
+		original:'/Dahlak-art-king.jpg',
+		width: 2157,
+		height: 1618
+	},
+
+	{
+		src:'/assets/photos/Dahlak-art-lion.jpg',
+		original:'/Dahlak-art-lion.jpg',
+		width: 2156,
+		height: 1618
 	},
 
 	{
