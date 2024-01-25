@@ -7,7 +7,7 @@ const BiographyText = () => {
 				<p className='italic flex justify-center mt-3'>Edited by Sam</p>
 			<div className={styles.article}>
 				<div>
-					<p className={styles.articleParagraph}>I was born in Ethiopia (I’m Eritrean, that complicates things) into a privileged position by Ethiopian standards, and 	4in some ways, even American standards. I had access to education, relative safety, proximity to whiteness, and many comforts that didn’t reach most of the population. I was the son of a pilot and a nurse and they were the only ones that worked for industry other than themselves. Everyone else in my family, distant or otherwise, had their own enterprise—-from owning small businesses to large corporations. I was raised to be a capitalist to an extent, and later in my life I learned why. 
+					<p className={styles.articleParagraph}>I was born in Ethiopia (I’m Eritrean, that complicates things) into a privileged position by Ethiopian standards, and in some ways, even American standards. I had access to education, relative safety, proximity to whiteness, and many comforts that didn’t reach most of the population. I was the son of a pilot and a nurse and they were the only ones that worked for industry other than themselves. Everyone else in my family, distant or otherwise, had their own enterprise—-from owning small businesses to large corporations. I was raised to be a capitalist to an extent, and later in my life I learned why. 
 					</p>
 
 					<p className={styles.articleParagraph}>
